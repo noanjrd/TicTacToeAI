@@ -3,6 +3,7 @@ import random
 class Game:
 	def __init__(self):
 		self.tab = [[" ", " ", " "],[" ", " ", " "],[" ", " ", " "]]
+		self.level = 0
 
 	def printgame(self):
 		print("    1   2   3")
@@ -29,6 +30,7 @@ class Game:
 			self.tab[y][x] = c
 
 	def check_victory(self):
+		self.printgame()
 		for i in self.tab:
 			if i[0] == i[1] and i[0] == i[2] and i[0] != " ":
 				if (i[0] == "o"):
@@ -67,6 +69,69 @@ class Game:
 			if (self.tab[y][x] == " "):
 				self.tab[y][x] = "o"
 				return 1
+			
+	def check_victory_ai(self):
+		for i in self.tab:
+			if i[0] == i[1] and i[0] == i[2] and i[0] != " ":
+				if (i[0] == "o"):
+					return +1
+				else:
+					return -1
+		for i in range(3):
+			if (self.tab[0][i] == self.tab[1][i] and self.tab[0][i] == self.tab[2][i] and self.tab[0][i] != " "):
+				if (self.tab[0][i] == "o"):
+					return +1
+				else:
+					return -1
+		if ((self.tab[0][0] == self.tab[1][1] and self.tab[0][0] == self.tab[2][2] and self.tab[1][1] != " ") 
+			or (self.tab[0][2] == self.tab[1][1] and self.tab[0][2] == self.tab[2][0] and self.tab[1][1] != " ")):
+			if (self.tab[1][1] == "o"):
+				return 1
+			else:
+				return -1
+		return 0
+	
+	# o is the robot and x the player
+	def minimax(self, player, deepness):
+		if (self.check_victory_ai() == -1 or self.check_victory_ai() == 1 or self.checkfilled() == 1 or deepness >= self.level):
+			return self.check_victory_ai()
+		if (player == 'o'):
+			bestscore = float('-inf')
+		if (player == 'x'):
+			bestscore = float('+inf')
+		for j in range(3):
+			for i  in range(3):
+				if (self.tab[j][i] == ' '):
+					self.tab[j][i] = player
+					if (player == 'o'):
+						score = self.minimax('x', deepness+1)
+					else:
+						score = self.minimax('o', deepness+1)
+					# print(score)
+					self.tab[j][i] = ' '
+					if player == 'o':
+						bestscore = max(bestscore, score)
+					else:
+						bestscore = min(bestscore, score)
+		return bestscore
 
+	def AI_move(self):
+		bestscore = float('-inf')
+		bestcase = [0,0]
+		if (self.level == 0):
+			self.playrandomly()
+			return
+		for j in range(3):
+			for i in range(3):
+				if (self.tab[j][i] == ' '):
+					self.tab[j][i] = 'o'
+					score = self.minimax('x',0)
+					# print(score)
+					self.tab[j][i] = ' '
+					if (score > bestscore):
+						bestscore = score
+						bestcase[0] = j
+						bestcase[1] = i
+		self.tab[bestcase[0]][bestcase[1]] = 'o'
 
 
