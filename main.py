@@ -22,8 +22,14 @@ while True:
 	if (g.checkfilled() == 1):
 		print("No one won!")
 		break
-	x = int(input("x : "))
-	y = int(input("y : "))
+	x =input("x : ")
+	y = input("y : ")
+	if (x.isdigit() != 1 or y.isdigit() != 1):
+		print("\nWrong input", end="")
+		continue
+	else:
+		x = int(x)
+		y = int(y)
 	if (g.fill(x,y,"x") == -1):
 		continue
 	if (g.check_victory() == 1):
