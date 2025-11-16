@@ -30,26 +30,32 @@ class Game:
 			self.tab[y][x] = c
 
 	def check_victory(self):
-		self.printgame()
+		# self.printgame()
 		for i in self.tab:
 			if i[0] == i[1] and i[0] == i[2] and i[0] != " ":
 				if (i[0] == "o"):
+					self.printgame()
 					print("You lost :(")
 				else:
+					self.printgame()
 					print("You won!")
 				return 1
 		for i in range(3):
 			if (self.tab[0][i] == self.tab[1][i] and self.tab[0][i] == self.tab[2][i] and self.tab[0][i] != " "):
 				if (self.tab[0][i] == "o"):
+					self.printgame()
 					print("You lost :(")
 				else:
+					self.printgame()
 					print("You won!")
 				return 1
 		if ((self.tab[0][0] == self.tab[1][1] and self.tab[0][0] == self.tab[2][2] and self.tab[1][1] != " ") 
 			or (self.tab[0][2] == self.tab[1][1] and self.tab[0][2] == self.tab[2][0] and self.tab[1][1] != " ")):
 			if (self.tab[1][1] == "o"):
+				self.printgame()
 				print("You lost :(")
 			else:
+				self.printgame()
 				print("You won!")
 			return 1
 		return -1
@@ -126,7 +132,7 @@ class Game:
 				if (self.tab[j][i] == ' '):
 					self.tab[j][i] = 'o'
 					score = self.minimax('x',0)
-					# print(score)
+					print(score)
 					self.tab[j][i] = ' '
 					if (score > bestscore):
 						bestscore = score
