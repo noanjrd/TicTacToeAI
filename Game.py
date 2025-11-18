@@ -132,7 +132,7 @@ class Game:
 				if (self.tab[j][i] == ' '):
 					self.tab[j][i] = 'o'
 					score = self.minimax('x',0)
-					print(score)
+					# print(score)
 					self.tab[j][i] = ' '
 					if (score > bestscore):
 						bestscore = score
