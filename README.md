@@ -1,6 +1,6 @@
 <h1>🎮 Tic-Tac-Toe AI</h1>
 
-<p>Welcome to the Tic-Tac-Toe game in Python! 🐍 Play against an AI with three difficulty levels and see if you can beat it! 💪</p>
+<p>Welcome to the Tic-Tac-Toe game in Python! Play against an AI with three difficulty levels and see if you can beat it! </p>
 
 <h2>📋 Table of Contents</h2>
 <ul>
@@ -14,8 +14,8 @@
     <li>Play against a <strong>Random AI</strong> (Easy 😎)</li>
     <li>Play against an <strong>Intermediate AI</strong> (Intermediate 🤔)</li>
     <li>Play against an <strong>Unbeatable Minimax AI</strong> (Impossible 😱)</li>
-    <li>Command-line interface for interactive gameplay 🖥️</li>
-    <li>Simple Python code using Object-Oriented Programming 🐍📦</li>
+    <li>Command-line interface for interactive gameplay </li>
+    <li>Simple Python code using Object-Oriented Programming </li>
 </ul>
 
 <h2 id="installation">💾 Installation</h2>
