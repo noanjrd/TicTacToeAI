@@ -26,7 +26,7 @@ cd TicTacToeAI
 </pre>
 
 > [!NOTE]
-> Make sure Python 3 is installed on your computer
+> Make sure Python 3 is installed on your computer.
 
 <h2 id="usage">🕹️ Usage</h2>
 <p>Run the game using Python and follow the instructions in the terminal:</p>
