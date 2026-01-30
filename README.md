@@ -11,9 +11,9 @@
 
 <h2 id="features">✨ Features</h2>
 <ul>
-    <li>Play against a <strong>Random AI</strong> (Easy 😎)</li>
-    <li>Play against an <strong>Intermediate AI</strong> (Intermediate 🤔)</li>
-    <li>Play against an <strong>Unbeatable Minimax AI</strong> (Impossible 😱)</li>
+    <li>Play against a <strong>Random AI</strong> (Easy)</li>
+    <li>Play against an <strong>Intermediate AI</strong> (Intermediate)</li>
+    <li>Play against an <strong>Unbeatable Minimax AI</strong> (Impossible)</li>
     <li>Command-line interface for interactive gameplay </li>
     <li>Simple Python code using Object-Oriented Programming </li>
 </ul>
@@ -35,9 +35,9 @@ python main.py
 </pre>
 <p>Choose your difficulty level:</p>
 <ul>
-    <li><strong>Easy 😎</strong> - AI plays randomly</li>
-    <li><strong>Intermediate 🤔</strong> - AI uses some strategy</li>
-    <li><strong>Impossible 😱</strong> - AI uses Minimax, unbeatable</li>
+    <li><strong>Easy</strong> - AI plays randomly</li>
+    <li><strong>Intermediate</strong> - AI uses some strategy</li>
+    <li><strong>Impossible</strong> - AI uses Minimax, unbeatable</li>
 </ul>
 <p>Enter your moves by selecting the row and column numbers. Have fun! 🎉</p>
 
