@@ -41,13 +41,13 @@ A Python implementation of Tic-Tac-Toe with an AI opponent powered by the **Mini
 **Board Layout:**
 ```
     1   2   3
-   -----------
+    -----------
  1 | x |   |   |
-   -----------
+    -----------
  2 |   | o |   |
-   -----------
+    -----------
  3 |   |   |   |
-   -----------
+    -----------
 ```
 - **x:** Your moves
 - **o:** AI's moves
