@@ -11,13 +11,13 @@ def get_ai_level():
 			return 1
 		if "impossible" in lvl or "3" in lvl:
 			return 100
-		print("Invalid input, please try again.")
+		print("\nInvalid input, please try again.")
 
 def play_game():
 	g = Game(get_ai_level())
 		
 	while True:
-		print("\n\n")
+		print("\n")
 		Displaying.print_game(g.board)
 		
 		if g.check_filled():
@@ -40,7 +40,7 @@ def player_turn(game):
 		x = int(input("x (1-3): "))
 		y = int(input("y (1-3): "))
 		if game.fill(x, y, "x") == -1:
-			print("Not a possible case")
+			print("\nNot a possible case")
 			return False
 		return True
 	except ValueError:
