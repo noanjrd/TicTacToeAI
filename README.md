@@ -1,8 +1,8 @@
-# 🎮 Tic-Tac-Toe AI
+# Tic-Tac-Toe AI
 
 A Python implementation of Tic-Tac-Toe with an AI opponent powered by the **Minimax algorithm**. Challenge yourself against three difficulty levels, from random moves to mathematically perfect play.
 
-## ✨ Features
+## Features
 
 - **Three AI Difficulty Levels:**
   - **Easy:** Completely random moves
@@ -11,7 +11,7 @@ A Python implementation of Tic-Tac-Toe with an AI opponent powered by the **Mini
 - **Interactive CLI:** Clean command-line interface with real-time board rendering
 - **Modular Design:** Separated game logic, display, and input handling
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -30,7 +30,7 @@ A Python implementation of Tic-Tac-Toe with an AI opponent powered by the **Mini
    python main.py
    ```
 
-## 🎯 How to Play
+## How to Play
 
 1. **Select Difficulty:** Type `1`/`Easy`, `2`/`Inter`, or `3`/`Impossible`
 
@@ -52,7 +52,7 @@ A Python implementation of Tic-Tac-Toe with an AI opponent powered by the **Mini
 - **x:** Your moves
 - **o:** AI's moves
 
-## 🧠 Technical Overview
+## Technical Overview
 
 The **Minimax algorithm** recursively evaluates all possible game states:
 - `+1` for AI win
@@ -64,7 +64,7 @@ The **Minimax algorithm** recursively evaluates all possible game states:
 - **Intermediate (level = 1):** Minimax with 1-move lookahead
 - **Impossible (level = 100):** Complete game tree exploration
 
-## 📂 Project Structure
+## Project Structure
 
 - [main.py](main.py): Game loop and user input
 - [Game.py](Game.py): Game logic and minimax AI
