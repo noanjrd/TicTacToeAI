@@ -1,5 +1,5 @@
-from Game import Game
-import Displaying
+from game import Game
+import displaying
 
 def get_ai_level():
 	while True:
@@ -14,26 +14,29 @@ def get_ai_level():
 		print("\nInvalid input, please try again.")
 
 def play_game():
-	g = Game(get_ai_level())
-		
-	while True:
-		print("\n")
-		Displaying.print_game(g.board)
-		
-		if g.check_filled():
-			print("No one won (Draw)!")
-			break
+	try : 
+		g = Game(get_ai_level())
 
-		if not player_turn(g):
-			continue
+		while True:
+			print("\n")
+			displaying.print_game(g.board)
 			
-		if Displaying.check_winner(g.check_victory(1, -1), g.board):
-			break
+			if g.check_filled():
+				print("No one won (Draw)!")
+				break
 
-		g.AI_move()
-		
-		if Displaying.check_winner(g.check_victory(1, -1), g.board):
-			break
+			if not player_turn(g):
+				continue
+				
+			if displaying.check_winner(g.check_victory(1, -1), g.board):
+				break
+
+			g.AI_move()
+			
+			if displaying.check_winner(g.check_victory(1, -1), g.board):
+				break
+	except KeyboardInterrupt:
+		print("\nGame interrupted by user. Goodbye!")
 
 def player_turn(game):
 	try:

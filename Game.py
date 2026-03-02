@@ -91,8 +91,12 @@ class Game:
                     self.board[j][i] = " "
                     if player == "o":
                         bestscore = max(bestscore, score)
+                        if bestscore == 1:
+                            return bestscore
                     else:
                         bestscore = min(bestscore, score)
+                        if bestscore == -1:
+                            return bestscore
         return bestscore
 
     def AI_move(self):

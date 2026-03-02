@@ -67,5 +67,5 @@ The **Minimax algorithm** recursively evaluates all possible game states:
 ## Project Structure
 
 - [main.py](main.py): Game loop and user input
-- [Game.py](Game.py): Game logic and minimax AI
-- [Displaying.py](Displaying.py): Board rendering and results
+- [game.py](game.py): Game logic and minimax AI
+- [displaying.py](displaying.py): Board rendering and results
